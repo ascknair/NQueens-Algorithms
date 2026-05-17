@@ -80,18 +80,20 @@ A valid solution satisfies:
 NQueens-Algorithms/
 │
 ├── dfs_nqueen.py
-├── greedy_hillclimbing.py
+├── hill_climbing.py
 ├── simulated_annealing.py
 ├── genetic_algorithm.py
 │
-├── plot_runtime.py
-├── plot_memory.py
-├── generate_board.py
+├── Figures/
+│   ├── dfs_workflow.pdf
+│   ├── hill_climbing_workflow.pdf
+│   ├── simulated_annealing_workflow.pdf
+│   ├── genetic_algorithm_workflow.pdf
+│   ├── runtime_comparison.pdf
+│   ├── memory_comparison.pdf
 │
-├── runtime_comparison.pdf
-├── memory_comparison.pdf
-├── nqueens_board.pdf
-│
-├── report.pdf
+├── Assignment_Link_Solving N-Queens Problem - Akhil Nair.pdf
+├── PR_Assignment_Akhil_Nair.pdf
+├── README.md
 ├── requirements.txt
-└── README.md
+├── .gitignore
