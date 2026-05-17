@@ -71,7 +71,6 @@ A valid solution satisfies:
 - Python
 - Matplotlib
 - NumPy
-- draw.io
 - LaTeX / Overleaf
 
 
