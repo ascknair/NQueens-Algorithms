@@ -1,0 +1,28 @@
+digraph Genetic_Algorithm_Workflow {
+	rankdir=TB
+	splines=ortho
+	nodesep=0.6
+	ranksep=0.8
+	size="8,10"
+	node [color=black fillcolor=lightblue fontname=Helvetica fontsize=12 margin="0.2,0.1" shape=rectangle style="rounded,filled"]
+	A [label=Start]
+	B [label="Generate Initial Population"]
+	C [label="Evaluate Fitness"]
+	D [label=Selection]
+	E [label=Crossover]
+	F [label=Mutation]
+	G [label="Create New Population"]
+	H [label="Termination Condition Met?"]
+	I [label="Best Solution Found"]
+	J [label=End]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+	H -> I [xlabel="  Yes  "]
+	I -> J
+	H -> C [constraint=false minlen=3 xlabel="   No   "]
+}

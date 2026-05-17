@@ -1,0 +1,34 @@
+digraph Simulated_Annealing_Workflow {
+	rankdir=TB
+	splines=ortho
+	nodesep=0.6
+	ranksep=0.8
+	size="8,10"
+	node [color=black fillcolor=lightblue fontname=Helvetica fontsize=12 margin="0.2,0.1" shape=rectangle style="rounded,filled"]
+	A [label=Start]
+	B [label="Generate Initial State"]
+	C [label="Set Initial Temperature"]
+	D [label="Generate Random Neighbor"]
+	E [label="Calculate Energy Difference"]
+	F [label="Better Solution?"]
+	G [label="Accept Move"]
+	H [label="Accept Probabilistically?"]
+	I [label="Reject Move"]
+	J [label="Reduce Temperature"]
+	K [label="Stopping Condition Met?"]
+	L [label=End]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G [xlabel=" Yes "]
+	F -> H [xlabel=" No "]
+	H -> G [xlabel=" Yes "]
+	H -> I [xlabel=" No "]
+	G -> J
+	I -> J
+	J -> K
+	K -> L [xlabel=" Yes "]
+	K -> D [constraint=false minlen=3 xlabel="   No   "]
+}

@@ -1,0 +1,27 @@
+digraph DFS_Workflow {
+	rankdir=TB
+	splines=ortho
+	nodesep=0.6
+	ranksep=0.8
+	size="8,10"
+	node [color=black fillcolor=lightblue fontname=Helvetica fontsize=12 margin="0.2,0.1" shape=rectangle style="rounded,filled"]
+	A [label=Start]
+	B [label="Initialize Empty Board"]
+	C [label="Place Queen in Current Row"]
+	D [label="Is Position Safe?"]
+	E [label="Move to Next Row"]
+	F [label="All Queens Placed?"]
+	G [label="Solution Found"]
+	H [label=Backtrack]
+	I [label=End]
+	A -> B
+	B -> C
+	C -> D
+	D -> E [xlabel=" Yes "]
+	E -> F
+	F -> G [xlabel=" Yes "]
+	G -> I
+	D -> H [xlabel=" No "]
+	H -> C
+	F -> H [xlabel=" No "]
+}
